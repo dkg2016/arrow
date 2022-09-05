@@ -1,0 +1,26 @@
+{
+  "name": "arrow",
+  "version": "0.0.1",
+  "description": "A framework like Angular2",
+  "scripts": {
+    "start": "webpack",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkg2016/arrow.git"
+  },
+  "author": "dkg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkg2016/arrow/issues"
+  },
+  "homepage": "https://github.com/dkg2016/arrow#readme",
+  "devDependencies": {
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.8.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
