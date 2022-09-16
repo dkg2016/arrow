@@ -1,0 +1,1 @@
+export const ANNOTATIONS = '__annotations__';
