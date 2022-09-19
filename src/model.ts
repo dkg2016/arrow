@@ -7,5 +7,5 @@ export interface ProviderConfig {
   provider: any;
   useValue?: object;
   useClass?: Fn<any>;
-  useExist?: boolean;
+  useExist?: any;
 }

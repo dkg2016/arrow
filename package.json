@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "A framework like Angular2",
   "scripts": {
-    "start": "webpack",
-    "build": "tsc",
+    "dev": "webpack --watch",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

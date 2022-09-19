@@ -1,4 +1,4 @@
-import { Injectable } from "./di/decorator";
+import { Injectable, InjectionToken, Injector } from "./di/decorator";
 import { ProviderStore } from "./di/providerStore";
 
 @Injectable()
@@ -20,15 +20,16 @@ class Test {
   }
 }
 
-const providerStore = new ProviderStore(null, [{
-  provider: Test,
-  useClass: Test
-}, {
-  provider: H,
-  useClass: H
-}]);
+const K = new InjectionToken('K');
 
-// console.log(providerStore)
+const providerStore = new ProviderStore(null, [
+  { provider: Test, useClass: Test },
+  { provider: H, useClass: H },
+  { provider: H, useExist: Test},
+  { provider: K, useValue: {a: 1} },
+]);
 
-// const inst = providerStore.getProvider(Test);
-// console.log(inst)
+console.log(providerStore)
+
+const inject = new Injector(providerStore);
+console.log(inject.get(K));
